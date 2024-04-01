@@ -1,0 +1,50 @@
+### Create
+POST http://uzcarduz.herokuapp.com/api/v1/transaction
+Authorization: Basic bank bankjon
+Content-Type: application/json
+
+{
+  "fromCardNumber": "8600814069764408",
+  "toCardNumber": "8600324432080802",
+  "amount": 4000
+}
+
+### List By Card
+GET http://uzcarduz.herokuapp.com/api/v1/transaction/card
+Authorization: Basic bank bankjon
+Content-Type: application/json
+
+{
+  "cardNumber": "8600324432080802"
+}
+
+### List By Client Id
+GET http://uzcarduz.herokuapp.com/api/v1/transaction/client/8a8a839980ffbd9d0180ffbe4b300000
+Authorization: Basic bank bankjon
+
+### List By Phone Number
+GET http://uzcarduz.herokuapp.com/api/v1/transaction/phone
+Authorization: Basic bank bankjon
+Content-Type: application/json
+
+{
+  "phone": "+998991234568"
+}
+
+### List By Profile Name From Client
+GET http://uzcarduz.herokuapp.com/api/v1/transaction/profile/bank
+Authorization: Basic bank bankjon
+
+### List By Profile Name From Transaction
+GET http://uzcarduz.herokuapp.com/api/v1/transaction/bank
+Authorization: Basic bank bankjon
+
+### List By Filter
+GET http://uzcarduz.herokuapp.com/api/v1/transaction/filter
+Authorization: Basic admin adminjon
+Content-Type: application/json
+
+{
+  "fromDate": "2022-05-28",
+  "toDate": "2022-05-30"
+}
